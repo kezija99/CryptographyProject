@@ -69,6 +69,10 @@ public class Main extends Application {
 	      caKeyPair = new KeyPair(publicKey, (PrivateKey) key);
 	      //createEmptyCRL("SHA256withRSA");
 	    }
+	    
+	    //If a new CA certificate is needed to be created
+	    /*X509Certificate userCert = RegistrationController.generate(caKeyPair, "SHA256withRSA", "root-cert", 365);
+	    RegistrationController.writeCertToFileBase64Encoded(userCert, ".\\CryptoProject\\CACertificate\\" + "root" + "-cert.crt");*/
 		launch(args);
 	}
 	
